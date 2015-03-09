@@ -10,12 +10,8 @@ if(isset($_SESSION["username"])=="")
 	<?php
 }
 
-if($_GET["id"]!= ""){
-	$userid = $_GET["id"];
-}
-else {
-	$userid = $_SESSION["userid"];
-}
+$userid = (isset($_GET['query_age']) ? $_GET['query_age'] : $_SESSION["userid"]);
+
 ?>
 
 <!DOCTYPE html>
